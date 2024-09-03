@@ -55,6 +55,25 @@ a {
 }
 
 
+/* nội dung dài chỉ hiển thị 1 hay 2 dòng theo ý để không phá vỡ thiết kế */
+.line-clamp-1{
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-2{
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.break-all{
+  word-break: break-all;
+}
+
 /* =========================header==================== */
 
 .header {
@@ -333,6 +352,7 @@ a {
     border-radius: 12px;
     background: #fff;
     border: 1px solid #e2dfda;
+    flex: 1;
   
 }
 
