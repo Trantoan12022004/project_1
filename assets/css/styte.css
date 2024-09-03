@@ -414,16 +414,23 @@ a {
   background: var(--primary-color);
 }
 
-/* ============================feedback==================================== */
-
+/* =================feedback================== */
 .feedback {
   margin-top: 135px;
-  padding: 65px 0;
+  padding: 96px 0;
   background: #2e2100;
 }
 
-.feedback .feedback-item {
+.feedback-item {
+  width: 100%;
   display: flex;
+  flex-shrink: 0;
+  transform: translateX(-100%);
+  transition: all ease 0.5s;
+}
+.feedback-list {
+  display: flex;
+  overflow: hidden;
 }
 
 .feedback-item .avatar {
@@ -432,6 +439,7 @@ a {
   border-radius: 50%;
   object-fit: cover;
 }
+
 .feedback-item .info .member-name {
   margin-top: 18px;
   color: #f7f7f7;
@@ -449,32 +457,32 @@ a {
 }
 
 .feedback-item .dots {
+  gap: 6px;
   display: flex;
   margin-top: 28px;
-  gap: 6px;
 }
 
-.feedback-item .dot{
-  width: 6px;height: 6px;
+.feedback-item .dot {
+  height: 6px;
+  width: 6px;
   border-radius: 50%;
   background: #634700;
   cursor: pointer;
-  
 }
 
-.feedback-item .content{
-  width: 66%;
+.feedback-item .dot.active {
+  background: var(--primary-color);
+  cursor: default;
+}
+
+.feedback-item .content {
+  width: 720px;height: 160px;
   margin-left: auto;
 }
 
-.feedback-item blockquote{
+.feedback-item blockquote {
   color: #fff;
   font-size: 2.6rem;
   font-style: italic;
   line-height: 1.54;
-}
-
-.feedback-item .dot.active{
-  background: var(--primary-color);
-  cursor: default;
 }
